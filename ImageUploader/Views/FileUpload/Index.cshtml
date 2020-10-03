@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="flex-container">
+    <div id="file-upload-card" class="card shadow">
+        <div class="card-body text-center p-4">
+            <h5>Upload your Image</h5>
+            <p class="text-secondary">File should be jpg, jpeg or png</p>
+            <div id="drag-n-drop" class="drag-n-drop p-4 rounded">
+                <img src="~/image-placeholder.svg" />
+                <p></p>
+                <span class="text-secondary">Drag & Drop your image here</span>
+            </div>
+            <p></p>
+            <p>or</p>
+            <input id="fileUpload" type="file" hidden />
+            <button id="fileUploadUI" class="btn btn-primary">Choose a file</button>
+            <p id="invalidFile" class="text-danger"></p>
+        </div>
+    </div>
+    <div id="loader-card" class="card shadow" hidden>
+        <div class="card-body text-center p-4">
+            <p>Uploading....</p>
+            <div class="progress">
+                <div class="progress-value"></div>
+            </div>
+        </div>
+    </div>
+    <div id="upload-complete-card" class="card shadow" hidden>
+        <div class="card-body text-center p-4">
+            <i class="fa fa-check-circle" style="font-size:40px;color:green"></i>
+            <p>Uploaded Successfully!</p>
+            <img id="uploadedImage" class="shadow rounded mb-3" height="200" width="300" src="~/stock.jpg" />
+            <input id="uploadedFilePath" type="text" class="form-control mb-3" />
+            <button id="copyToClipBoard" class="btn btn-primary">Copy Link!</button>
+        </div>
+    </div>
+</div>
+

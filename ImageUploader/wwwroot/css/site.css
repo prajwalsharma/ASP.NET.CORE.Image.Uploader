@@ -1,0 +1,59 @@
+﻿html, body {
+    height: 100vh;
+    background-color: #FAFAFB;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.drag-n-drop {
+    border: 1px solid #AFCCF6;
+    border-style: dashed;
+    background-color: #F6F8FB;
+}
+
+
+.progress {
+    background: lightgrey;
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 10px;
+    width: 300px;
+}
+
+.progress-value {
+    animation: load 3s normal forwards infinite;
+    border-radius: 100px;
+    background: #007bff;
+    height: 10px;
+    width: 500px;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    75% {
+        width: 75%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
